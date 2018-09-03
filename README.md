@@ -17,6 +17,20 @@ ng add @angular/material
 npm install --save hammerjs
 ```
 
+4. More install
+```bash
+npm install --save moment
+npm install --save @angular/material-moment-adapter
+npm install --save @angular/flex-layout
+```
+
+5. Additional fix for flex-layout and rxjs 
+```bash
+npm install --save @angular/flex-layout hammerjs
+npm install --save rxjs@6.2.2
+npm install --save @angular/flex-layout@6.0.0-beta.17
+```
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
