@@ -31,6 +31,9 @@ npm install --save rxjs@6.2.2
 npm install --save @angular/flex-layout@6.0.0-beta.17
 ```
 
+6. Add {import 'hammerjs';} in main.ts
+
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

@@ -29,8 +29,7 @@ let MODULES = [
 
 @NgModule({
     imports: MODULES,
-    
-    exports: MODULES,
+    exports: MODULES
   })
 
   export class MatModule {}
