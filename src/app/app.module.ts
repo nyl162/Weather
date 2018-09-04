@@ -8,6 +8,8 @@ import {MatModule} from './material.module';
 import { FormsModule } from '@angular/forms';
 import { CityInputComponent } from './city-input/city-input.component';
 import { WeatherDetailComponent } from './weather-detail/weather-detail.component';
+import { RoutingModule } from './routing.modules';
+
 
 
 @NgModule({
@@ -20,7 +22,8 @@ import { WeatherDetailComponent } from './weather-detail/weather-detail.componen
     BrowserModule,
     BrowserAnimationsModule,
     MatModule,
-    FormsModule
+    FormsModule,
+    RoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -15,6 +15,8 @@ import {MatSliderModule} from '@angular/material/slider';
 import {MatListModule} from '@angular/material/list';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { HttpClientModule } from '@angular/common/http';
+import { PlatformModule } from "@angular/cdk/platform";
+import { ObserversModule } from "@angular/cdk/observers";
 
 let MODULES = [
     MatToolbarModule,MatFormFieldModule,MatInputModule,
@@ -24,7 +26,9 @@ let MODULES = [
     MatIconModule, MatSliderModule,
     HttpClientModule,
     MatListModule,
-    MatGridListModule
+    MatGridListModule,
+    PlatformModule,
+    ObserversModule
   ];
 
 @NgModule({
