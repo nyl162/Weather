@@ -7,9 +7,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CityInputComponent implements OnInit {
 
+  citylist: string[] = [
+    'Singapore',
+    'Kuala Lumpur',
+    'Tokyo',
+    'Hong Kong',
+    'Beijing'
+  ]
+
   constructor() { }
 
   ngOnInit() {
+  }
+  addNewCity(data){
+    if(!(this.citylist.some(x => x === data.value.city)) && data.value.city.length>0 ){
+      this.citylist.push(data.value.city);
+    }
+
+    console.log(this.citylist);
   }
 
 }

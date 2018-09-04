@@ -1,3 +1,6 @@
-<p>
-  city-input works!
-</p>
+
+<form #AddCity="ngForm" (ngSubmit) = "addNewCity(AddCity)">
+  City:
+  <input type="text" name = "city" ngModel>
+  <button type = "submit"> Add </button>
+</form>
