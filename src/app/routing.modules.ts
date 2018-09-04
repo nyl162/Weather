@@ -7,7 +7,7 @@ import { WeatherDetailComponent } from "./weather-detail/weather-detail.componen
 const appRoutes :Routes = [
 
     {path: '' , component: CityInputComponent},
-  //  {path: '/Weather/:CityID' , component: WeatherDetailComponent},
+    {path: 'Weather/:RouteCityID' , component: WeatherDetailComponent},
     {path: '**' , redirectTo: '/', pathMatch: 'full'}
 
 ];

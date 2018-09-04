@@ -1,3 +1,16 @@
-<p>
-  Current temperature at {{WeatherResult?.name}} is {{WeatherResult?.main.temp}} C
-</p>
+
+<div fxLayout="column" fxLayoutAlign="start" class = "addMargin">
+        <mat-toolbar fxLayout="row" fxLayoutAlign="space-between" fxFlex="glow">  
+            {{WeatherResult?.name}}
+          <div>
+            <button mat-raised-button color="primary" (click) = "goBack()"> Back </button>
+          </div>
+        </mat-toolbar>
+        <mat-card class = "addMargin">
+          <mat-card-content>
+              <p>
+                  Current temperature at {{WeatherResult?.name}} is  {{WeatherResult?.main.temp}} C
+              </p>
+          </mat-card-content>
+        </mat-card>
+  </div>

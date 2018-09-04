@@ -1,5 +1,6 @@
-<div fxLayout="column" fxLayoutAlign="start">
-  <form #AddCity="ngForm" (ngSubmit) = "addNewCity(AddCity)" fxFlex="glow">
+<div fxLayout="column" fxLayoutAlign="start"  class = "addMargin">
+  <form #AddCity="ngForm" (ngSubmit) = "addNewCity(AddCity)">
+    <mat-toolbar> 
     <mat-form-field fxFlex="glow"> 
       <div  fxLayout="row" fxLayoutAlign="end">  
         <input type="text" name = "city" placeholder = "Add New City." ngModel matInput fxFlex="glow">
@@ -8,9 +9,10 @@
         </div>
       </div>
     </mat-form-field>
+    </mat-toolbar>
   </form>
     <div  *ngFor="let n of citylist">
-      <mat-card class = "addMargin">
+      <mat-card class = "addMargin" (click) = "selectCity(n)" >
         <mat-card-content>
           {{n}}
         </mat-card-content>
