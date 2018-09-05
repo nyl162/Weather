@@ -11,13 +11,18 @@ export class CityInputComponent implements OnInit {
 
   citylist: string[];
 
+  test: number[] = [0,0,0];
+
+ // console.log('main' ,test[2]++);
+
   constructor(private router:Router,private CityListS: CityListService) { 
-  
+    console.log('constructor' , this.test[1]++);
   this.citylist = CityListS.ReadCityS();
   }
 
 
   ngOnInit() {
+    console.log('ngOnInit' , this.test[0]++);
   }
   addNewCity(data){
     if(!(this.citylist.some(x => x === data.value.city)) && data.value.city.length>0 ){

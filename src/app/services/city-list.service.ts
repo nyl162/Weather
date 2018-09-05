@@ -16,7 +16,7 @@ export class CityListService {
       'Beijing'
     ]
    }
-
+   
    AddCityS(n:string){
     this.citylistS.push(n);
    }
