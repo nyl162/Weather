@@ -11,8 +11,8 @@
     </mat-form-field>
     </mat-toolbar>
   </form>
-    <div  *ngFor="let n of citylist">
-      <mat-card class = "addMargin" (click) = "selectCity(n)" >
+    <div  *ngFor="let n of citylist; let i =index;">
+      <mat-card class = "addMargin" (click) = "selectCity(i)" >
         <mat-card-content>
           {{n}}
         </mat-card-content>

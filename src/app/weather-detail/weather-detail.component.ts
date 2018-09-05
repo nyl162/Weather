@@ -3,6 +3,9 @@ import { CurrentWeatherService } from '../services/current-weather.service';
 import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
 
+//testing
+import {CityListService} from '../services/city-list.service';
+
 //import { environment } from '../../environments/environment';
 
 @Component({
@@ -16,15 +19,18 @@ import { Router } from '@angular/router';
 export class WeatherDetailComponent implements OnInit {
 
   WeatherResult : any;
+  CitiListW: string[]
 
-  constructor(private Weather: CurrentWeatherService, private activatedRoute:ActivatedRoute, private router: Router) { }
+  constructor(private Weather: CurrentWeatherService, private activatedRoute:ActivatedRoute, private router: Router ,private CityListC: CityListService) {
+    this.CitiListW = CityListC.ReadCityS();
+   }
   //constructor(private http: HttpClient) { }
 
   ngOnInit() {
     const cityID: string = this.activatedRoute.snapshot.params.RouteCityID;
-    console.log(cityID);
+    console.log(this.CitiListW[cityID]);
     //this.http.get<any>(`${environment.openweather_url}Singapore&units=${environment.system}&APPID=${environment.openweather_api_key}`)
-    this.Weather.getWeather(cityID)
+    this.Weather.getWeather(this.CitiListW[cityID])
     .subscribe((data: any) => {
       
       this.WeatherResult = data;
