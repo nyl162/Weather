@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import {CityListService} from '../services/city-list.service';
 
 @Component({
   selector: 'app-city-input',
@@ -8,24 +9,22 @@ import { Router } from '@angular/router';
 })
 export class CityInputComponent implements OnInit {
 
-  citylist: string[] = [
-    'Singapore',
-    'Kuala Lumpur',
-    'Tokyo',
-    'Hong Kong',
-    'Beijing'
-  ]
+  citylist: string[];
 
-  constructor(private router:Router) { }
+  constructor(private router:Router,private CityListS: CityListService) { 
+  
+  this.citylist = CityListS.ReadCityS();
+  }
+
 
   ngOnInit() {
   }
   addNewCity(data){
     if(!(this.citylist.some(x => x === data.value.city)) && data.value.city.length>0 ){
       this.citylist.push(data.value.city);
-      data.reset();
+      
     }
-
+    data.reset();
     console.log(this.citylist);
   }
 
